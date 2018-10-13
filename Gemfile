@@ -73,3 +73,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Provides basic auth capabilities
+gem 'omniauth', '~> 1.8.1'
+# Allows auth from multiple providers
+gem 'omniauth-auth0', '~> 2.0.0'
