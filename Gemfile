@@ -58,5 +58,18 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+group :test, :development do
+  # Watches for file changes and runs commands based on changes
+  gem 'guard', '~>2.14.2',require:false
+  # Watches for .css, .js and .erb file changes and auto-refreshes
+  gem 'guard-livereload','~>2.5.2', require: false
+  # Watches for file changes and run tests based on changes
+  gem 'guard-minitest', '~>2.4.6', require: false
+  # Enables live reload from middleware
+  gem 'rack-livereload'
+  # Runs multiple commands from a Procfile since Docker only allows one command per service
+  gem 'foreman'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

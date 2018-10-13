@@ -1,4 +1,6 @@
 Rails.application.configure do
+  # Asks the Rack middleware to inject a livereload script into the HTML being served by the Rails server
+  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
