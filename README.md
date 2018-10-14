@@ -5,7 +5,7 @@ Quibbler is a digital bookshelf. Keep a log of the books you own, would like to 
 ## How to run it
 * ```docker-compose build``` will build the app.
 * ```docker-compose up``` will run the app.
-* ```docker-compose exec --user $(id -u):$(id -g) app /bin/bash``` will let you do whatever you need to do in the bash once your docker container is up and running.
+* ```docker-compose exec --user $(id -u):$(id -g) app /bin/bash``` will let you do whatever you need to do in the bash once your docker container is up and running. For instance, this is the place to run rake tasks.
 * NB: If you run into ownership problems, run ```docker exec -u root -t -i <CONTAINERID> /bin/bash```
 
 ### What comes with it?
@@ -26,3 +26,9 @@ https://travis-ci.org/asyi/quibbler
 http://35.227.53.153:3000/
 
 * Bonus: beautiful designs in progress!
+
+* Some major known issues:
+1. There's a bug in the log-out redirection
+1. While emails can be previewed, if you add a `deliver.now!` when calling the `new_book_email` method from the books controller, you will get the following error: "Errno::EADDRNOTAVAIL in BooksController#create. Cannot assign requested address - connect(2) for "localhost" port 25"
+1. The Kubernetes deployment can't connect to Postgres due to an auth problem: "fe_sendauth: no password supplied"
+1. The front-end is hideous
