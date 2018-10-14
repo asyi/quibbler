@@ -32,3 +32,8 @@ http://35.227.53.153:3000/
 1. While emails can be previewed, if you add a `deliver.now!` when calling the `new_book_email` method from the books controller, you will get the following error: "Errno::EADDRNOTAVAIL in BooksController#create. Cannot assign requested address - connect(2) for "localhost" port 25"
 1. The Kubernetes deployment can't connect to Postgres due to an auth problem: "fe_sendauth: no password supplied"
 1. The front-end is hideous
+
+* How to build and share the container image
+1. `docker build -t rails-quibbler .` builds the image
+1. `docker tag rails-quibbler gcr.io/rails-quibbler/rails-quibbler:<VERSIONNUMBER>` tags the image version
+1. `docker push gcr.io/rails-quibbler/rails-quibbler:<VERSIONNUMBER>` pushes it to GCP's Container Registry
