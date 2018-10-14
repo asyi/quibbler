@@ -9,3 +9,4 @@ COPY Gemfile Gemfile.lock /project/
 WORKDIR /project
 RUN bundle install
 COPY . /project
+CMD ["foreman", "start", "-f", "Procfile.dev", "-p", "3000"]
