@@ -1,24 +1,21 @@
-# README
+# QUIBBLER README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Quibbler is a digital bookshelf. Keep a log of the books you own, would like to own, are currently reading, and have already read!
 
-Things you may want to cover:
+## How to run it
+```docker-compose build``` will build the app.
+```docker-compose up``` will run the app.
 
-* Ruby version
+### What comes with it?
+* Automated database seeding thanks to the Faker gem
 
-* System dependencies
+* Hot reloading
 
-* Configuration
+* Oauth
+https://auth0.com/
 
-* Database creation
+* Emails via MJML
+http://localhost:3000/rails/mailers/user_mailer/new_book_email.html?locale=en
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* CI via Travis
+https://travis-ci.org/asyi/quibbler
