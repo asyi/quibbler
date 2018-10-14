@@ -27,7 +27,10 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+    @user = User.find_by(email: current_user.email)
     if @book.save
+      UserMailer.new_book_email(@book, @user)
+
       redirect_to @book
     else
       render :new

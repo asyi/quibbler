@@ -80,3 +80,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'omniauth', '~> 1.8.1'
 # Allows auth from multiple providers
 gem 'omniauth-auth0', '~> 2.0.0'
+
+# Provides responsive email templating
+gem 'mjml-rails'

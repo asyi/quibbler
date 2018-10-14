@@ -1,0 +1,7 @@
+<mjml>
+  <mj-body>
+    <mj-container>
+      <mj-text>You saved <%= @book.title %> to your list!</mj-text>
+    </mj-container>
+  </mj-body>
+</mjml>
