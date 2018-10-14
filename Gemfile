@@ -69,6 +69,8 @@ group :test, :development do
   gem 'rack-livereload'
   # Runs multiple commands from a Procfile since Docker only allows one command per service
   gem 'foreman'
+  gem 'faker'
+  gem 'factory_girl_rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
