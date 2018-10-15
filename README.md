@@ -5,7 +5,7 @@ Quibbler is a digital bookshelf built using `Ruby 2.5.1` and `Rails 5.2.1`. It l
 ## How to run it
 * `docker-compose build` will build the app.
 * `docker-compose up` will run the app. Check it out at http://localhost:3000
-* `docker-compose exec --user $(id -u):$(id -g) app /bin/bash` will let you do whatever you need to do in the bash once your docker container is up and running. For instance, this is the place to run rake tasks.
+* `docker-compose exec --user $(id -u):$(id -g) web /bin/bash` will let you do whatever you need to do in the bash once your docker container is up and running. For instance, this is the place to run rake tasks.
 * run `rake db seed` from the container's bash to seed the database with fake data
 * NB: If you run into ownership problems, run ```docker exec -u root -t -i <CONTAINERID> /bin/bash```
 
