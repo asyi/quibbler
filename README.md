@@ -1,6 +1,6 @@
 # QUIBBLER README
 
-Quibbler is a digital bookshelf built using `Ruby 2.5.1` and `Rails 5.2.1`. It let you keep track of the books: you own; would like to own; are currently reading; and have already read!
+Quibbler is a digital bookshelf built using `Ruby 2.5.1` and `Rails 5.2.1`. It lets you keep track of the books: you own; would like to own; are currently reading; and have already read!
 
 ## How to run it
 * `docker-compose build` will build the app.
